@@ -10,8 +10,9 @@
 
 | 📍Desafio           | 📝 Descrição                                 | 
 |--------------------|-------------------------------------------|
-|- [Mortgage Calculator](https://github.com/keniareis/Java-Studies/blob/main/Mortgage_Calculator.java)|Calculadora de hipoteca: Ferramenta para estimar custos de empréstimo para comprar uma casa com base em valor, taxa de juros, prazo, auxiliando tomada de decisão..|
+|-[Adivinhe o Número](https://github.com/keniareis/Java-Studies/blob/main/AdivinheNumero/Program.java)|É um jogo no qual o computador escolhe um número aleatório de 1 a 5 e o jogador tenta adivinhá-lo.|
 |- [FizzBuzz](https://github.com/keniareis/Java-Studies/blob/main/SimpleFizzBuzz.java)|FizzBuzz é um jogo de programação que substitui números múltiplos de 3 por "Fizz" e múltiplos de 5 por "Buzz," e ambos por "FizzBuzz" ao contar de 1 a um número específico."|
+|- [Mortgage Calculator](https://github.com/keniareis/Java-Studies/blob/main/Mortgage_Calculator.java)|Calculadora de hipoteca: Ferramenta para estimar custos de empréstimo para comprar uma casa com base em valor, taxa de juros, prazo, auxiliando tomada de decisão..|
 |- [Calculadora Multifuncional](https://github.com/keniareis/Java-Studies/blob/main/Calculadora.java)|Essa calculadora oferece operações matemáticas básicas, cálculo de média ponderada e conversão de temperatura, simplificando tarefas matemáticas e científicas em uma única ferramenta prática.|
 |-[Contagem das Letras](https://github.com/keniareis/Java-Studies/blob/main/Letras.java)|Conta o número de vogais e consoantes em uma frase ou palavra inserida pelo usuário.|
 
