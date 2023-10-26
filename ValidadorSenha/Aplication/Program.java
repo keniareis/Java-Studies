@@ -16,7 +16,8 @@ public class Program {
 
         while (!senhaForte) {
             System.out.print("\nDigite sua senha: \n");
-            validacao.senha = scanner.nextLine();
+            validacao.setSenha(scanner.nextLine());
+
             if (validacao.maiusculas() != null || validacao.minusculas() != null ||
                 validacao.especiais() != null || validacao.numero() != null || validacao.tamanho() != null)
             {

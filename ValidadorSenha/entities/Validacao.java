@@ -1,11 +1,16 @@
 package org.Learnig.ValidadorSenha.entities;
 
 public class Validacao {
-    public String senha;
+    private String senha;
     public static final String MAIUSCULAS = ".*[A-Z].*";
     public static final String MINUSCULAS = ".*[a-z].*";
     public static final String ESPECIAIS = ".*[.\\-\\[\\]*~_@#:?].*";
     public static final String NUMERO = ".*\\d.*";
+
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
 
     public String maiusculas(){
         if (!senha.matches(".*[A-Z].*")){
