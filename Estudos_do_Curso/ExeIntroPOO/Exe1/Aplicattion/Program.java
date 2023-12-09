@@ -1,6 +1,6 @@
 package org.Learnig.Estudos_do_Curso.ExeIntroPOO.Exe1.Aplicattion;
 
-import ExeIntroPOO.Exe1.Entities.Medidas;
+import org.Learnig.Estudos_do_Curso.ExeIntroPOO.Exe1.Entities.Medidas;
 
 import java.util.Locale;
 import java.util.Scanner;

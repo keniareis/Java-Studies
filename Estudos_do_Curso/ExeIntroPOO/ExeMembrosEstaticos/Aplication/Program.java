@@ -1,6 +1,6 @@
 package org.Learnig.Estudos_do_Curso.ExeIntroPOO.ExeMembrosEstaticos.Aplication;
 
-import ExeIntroPOO.ExeMembrosEstaticos.util.CurrencyConvertee;
+import org.Learnig.Estudos_do_Curso.ExeIntroPOO.ExeMembrosEstaticos.util.CurrencyConvertee;
 
 import java.util.Locale;
 import java.util.Scanner;

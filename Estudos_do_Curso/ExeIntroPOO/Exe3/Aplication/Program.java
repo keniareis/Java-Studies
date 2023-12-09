@@ -1,6 +1,6 @@
 package org.Learnig.Estudos_do_Curso.ExeIntroPOO.Exe3.Aplication;
 
-import ExeIntroPOO.Exe3.Entities.Student;
+import org.Learnig.Estudos_do_Curso.ExeIntroPOO.Exe3.Entities.Student;
 
 import java.util.Locale;
 import java.util.Scanner;

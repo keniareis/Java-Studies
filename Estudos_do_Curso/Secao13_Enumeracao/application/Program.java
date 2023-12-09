@@ -1,7 +1,7 @@
 package org.Learnig.Estudos_do_Curso.Secao13_Enumeracao.application;
 
-import Secao13_Enumeracao.entities.Order;
-import Secao13_Enumeracao.entities.enums.OrderStatus;
+import org.Learnig.Estudos_do_Curso.Secao13_Enumeracao.entities.Order;
+import org.Learnig.Estudos_do_Curso.Secao13_Enumeracao.entities.enums.OrderStatus;
 
 import java.util.Date;
 

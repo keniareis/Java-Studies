@@ -1,6 +1,6 @@
 package org.Learnig.Estudos_do_Curso.Secao9.Aplication;
 
-import Secao9.entities.Account;
+import org.Learnig.Estudos_do_Curso.Secao9.entities.Account;
 
 import java.util.Locale;
 import java.util.Scanner;

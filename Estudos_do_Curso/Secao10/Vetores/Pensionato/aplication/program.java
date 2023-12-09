@@ -1,6 +1,6 @@
 package org.Learnig.Estudos_do_Curso.Secao10.Vetores.Pensionato.aplication;
 
-import Secao10.Vetores.Pensionato.entities.Rent;
+import org.Learnig.Estudos_do_Curso.Secao10.Vetores.Pensionato.entities.Rent;
 
 import java.util.Locale;
 import java.util.Scanner;

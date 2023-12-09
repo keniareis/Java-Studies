@@ -1,6 +1,6 @@
 package org.Learnig.Estudos_do_Curso.Secao10.employees.aplication;
 
-import Secao10.employees.Entities.Employee;
+import org.Learnig.Estudos_do_Curso.Secao10.employees.Entities.Employee;
 
 import java.util.ArrayList;
 import java.util.List;

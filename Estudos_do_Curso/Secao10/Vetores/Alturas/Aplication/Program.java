@@ -1,6 +1,6 @@
 package org.Learnig.Estudos_do_Curso.Secao10.Vetores.Alturas.Aplication;
 
-import Secao10.Vetores.Alturas.Entities.Pessoas;
+import org.Learnig.Estudos_do_Curso.Secao10.Vetores.Alturas.Entities.Pessoas;
 
 import java.util.Locale;
 import java.util.Scanner;

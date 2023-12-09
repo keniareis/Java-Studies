@@ -1,6 +1,6 @@
 package org.Learnig.Estudos_do_Curso.Secao10.Vetores.exe02.Aplication;
 
-import Secao10.Vetores.exe02.Entities.Product;
+import org.Learnig.Estudos_do_Curso.Secao10.Vetores.exe02.Entities.Product;
 
 import java.util.Locale;
 import java.util.Scanner;
