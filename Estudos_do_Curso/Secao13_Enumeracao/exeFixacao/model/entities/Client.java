@@ -1,8 +1,10 @@
-package org.Learnig.Estudos_do_Curso.Secao13_Enumeracao.exeFixacao.entities;
+package org.Learnig.Estudos_do_Curso.Secao13_Enumeracao.exeFixacao.model.entities;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Client {
+    private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
     private String name;
     private String email;
     private Date birthDate;
@@ -38,5 +40,9 @@ public class Client {
 
     public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
+    }
+
+    public String toString(){
+        return name + " (" + sdf.format(birthDate) + ") - " + email;
     }
 }

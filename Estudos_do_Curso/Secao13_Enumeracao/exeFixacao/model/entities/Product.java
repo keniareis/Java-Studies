@@ -1,4 +1,4 @@
-package org.Learnig.Estudos_do_Curso.Secao13_Enumeracao.exeFixacao.entities;
+package org.Learnig.Estudos_do_Curso.Secao13_Enumeracao.exeFixacao.model.entities;
 
 public class Product {
     private String name;
