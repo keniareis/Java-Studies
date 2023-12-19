@@ -1,4 +1,4 @@
-package org.Learnig.Estudos_do_Curso.Secao14_Heranca_Polimorfismo.exemploHeranca.entities;
+package org.Learnig.Estudos_do_Curso.Secao14_Heranca_Polimorfismo.exemplos.entities;
 
 public class BusinessAcount extends Account{
     private Double loanLimit;
@@ -24,4 +24,11 @@ public class BusinessAcount extends Account{
             balance += amount - 10.0;
         }
     }
+
+    @Override
+    public void withdraw(double amount){
+        super.withdraw(amount);
+        balance -= 2.0;
+    }
+
 }

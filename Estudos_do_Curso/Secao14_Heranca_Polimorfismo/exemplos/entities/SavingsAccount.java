@@ -1,4 +1,4 @@
-package org.Learnig.Estudos_do_Curso.Secao14_Heranca_Polimorfismo.exemploHeranca.entities;
+package org.Learnig.Estudos_do_Curso.Secao14_Heranca_Polimorfismo.exemplos.entities;
 
 public class SavingsAccount extends Account{
 
@@ -24,4 +24,10 @@ public class SavingsAccount extends Account{
     public void updateBalance(){
         balance += balance + interestRate;
     }
+
+    @Override
+    public void withdraw(double amount){
+        balance -= amount;
+    }
+
 }

@@ -1,4 +1,4 @@
-package org.Learnig.Estudos_do_Curso.Secao14_Heranca_Polimorfismo.exemploHeranca.entities;
+package org.Learnig.Estudos_do_Curso.Secao14_Heranca_Polimorfismo.exemplos.entities;
 
 public class Account {
 
@@ -36,7 +36,7 @@ public class Account {
     }
 
     public void withdraw(double amount){
-        balance -= amount;
+        balance -= amount + 5.0;
     }
 
     public void deposit(double amount){
