@@ -1,10 +1,10 @@
 package org.Learnig.Estudos_do_Curso.Secao13_Enumeracao.exeFixacao.application;
 
+import org.Learnig.Estudos_do_Curso.Secao13_Enumeracao.entities.enums.OrderStatus;
 import org.Learnig.Estudos_do_Curso.Secao13_Enumeracao.exeFixacao.model.entities.Client;
 import org.Learnig.Estudos_do_Curso.Secao13_Enumeracao.exeFixacao.model.entities.Order;
 import org.Learnig.Estudos_do_Curso.Secao13_Enumeracao.exeFixacao.model.entities.OrderItem;
 import org.Learnig.Estudos_do_Curso.Secao13_Enumeracao.exeFixacao.model.entities.Product;
-import org.Learnig.Estudos_do_Curso.Secao13_Enumeracao.exe_Fixacao.entities.enums.OrderStatus;
 
 
 import java.text.ParseException;

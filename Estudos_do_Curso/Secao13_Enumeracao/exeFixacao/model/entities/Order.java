@@ -1,6 +1,7 @@
 package org.Learnig.Estudos_do_Curso.Secao13_Enumeracao.exeFixacao.model.entities;
 
-import org.Learnig.Estudos_do_Curso.Secao13_Enumeracao.exe_Fixacao.entities.enums.OrderStatus;
+
+import org.Learnig.Estudos_do_Curso.Secao13_Enumeracao.entities.enums.OrderStatus;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
