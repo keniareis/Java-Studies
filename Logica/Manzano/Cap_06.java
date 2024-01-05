@@ -40,11 +40,25 @@ public class Cap_06 {
 //
 
         //--D--
+//        int[] A = new int[15];
+//        int[] B = new int[15];
+//        for (int i = 0; i < A.length; i++) {
+//            A[i] = random.nextInt(10);
+//            B[i] = (int) Math.pow(A[i], 2);
+//        }
+//        System.out.println(Arrays.toString(A));
+//        System.out.println(Arrays.toString(B));
+
+
+        //--E--
         int[] A = new int[15];
         int[] B = new int[15];
         for (int i = 0; i < A.length; i++) {
             A[i] = random.nextInt(10);
-            B[i] = (int) Math.pow(A[i], 2);
+            B[i] = 1;
+            for (int j = A[i]; j > 0 ; j--) {
+                B[i] *= j;
+            }
         }
         System.out.println(Arrays.toString(A));
         System.out.println(Arrays.toString(B));
