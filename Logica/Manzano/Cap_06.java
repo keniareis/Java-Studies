@@ -80,7 +80,7 @@ public class Cap_06 {
         System.out.println(Arrays.toString(C));
 
 
-        --G--
+        //--G--
         String[] A = new String[20];
         String[] B = new String[30];
         String[] C = new String[50];
@@ -117,6 +117,106 @@ public class Cap_06 {
         System.arraycopy(A, 0, B, 0, A.length);
 
         System.out.println(Arrays.toString(B));
+
+
+        //--I--
+        Double[] A = new Double[5];
+        Double[] B = new Double[5];
+        Double[] C = new Double[5];
+        Double[] D = new Double[15];
+
+        for (int i = 0; i < A.length; i++) {
+            A[i] = random.nextDouble(10);
+            B[i] = random.nextDouble(10);
+            C[i] = random.nextDouble(10);
+        }
+        System.arraycopy(A, 0, D, 0, A.length);
+        System.arraycopy(B, 0, D, 5, B.length);
+        System.arraycopy(C, 0, D, 10, C.length);
+
+        System.out.println(Arrays.toString(D));
+
+        
+        //--J--
+        int[] A = new int[5];
+        int[] B = new int[5];
+
+        for (int i = 0; i < A.length; i++) {
+            A[i] = random.nextInt(10);
+
+            for (int j = 0; j <= A[i]; j++) {
+                B[i] += j;
+            }
+        }
+
+
+        //--K--
+        int[] A = new int[10];
+        int[] B = new int[10];
+
+        for (int i = 0; i < A.length; i++) {
+            A[i] = random.nextInt(10);
+            B[i] = (A[i] * -1);
+        }
+        System.out.println(Arrays.toString(B));
+
+
+        //--L--
+        int[] A = new int[10];
+        int[] B = new int[10];
+
+        for (int i = 0; i < A.length; i++) {
+            A[i] = random.nextInt(10);
+            B[i] = (A[i]/2);
+        }
+        System.out.println(Arrays.toString(A));
+        System.out.println(Arrays.toString(B));
+
+
+        //--M--
+        int[] A = new int[10];
+        int valor = random.nextInt(10);
+
+        for (int i = 0; i < A.length; i++) {
+            A[i] = valor * (i+1);
+        }
+        System.out.println(Arrays.toString(A));
+
+
+        //--N--
+        Double[] A = new Double[20];
+        for (int i = 0; i < A.length; i++) {
+            A[i] = scanner.nextDouble();
+        }
+
+        double maior = A[0],menor = A[0],media = 0.0;
+        for (int i = 0; i < A.length; i++) {
+            if (A[i] > maior){
+                maior = A[i];
+            }
+            if (A[i] < menor) {
+                menor = A[i];
+            }
+            media += A[i];
+        }
+        System.out.println(Arrays.toString(A));
+        System.out.println(maior + "\n" + menor + "\n" + (media/A.length));
+
+
+        //--O--
+        double[] A = new double[2];
+        double[] B = new double[2];
+
+        for (int i = 0; i < A.length; i++) {
+            A[i] = scanner.nextDouble();
+
+            B[i] = A[i] * (9/5) + 32;
+        }
+        System.out.println(Arrays.toString(A));
+        System.out.println(Arrays.toString(B));
+
+
+
 
         scanner.close();
     }
