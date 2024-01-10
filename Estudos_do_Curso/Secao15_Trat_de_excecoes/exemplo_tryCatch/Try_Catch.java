@@ -5,7 +5,20 @@ import java.util.Scanner;
 
 public class Try_Catch {
     public static void main(String[] args){
+        method1();
+
+        System.out.println("End of Program");;
+    }
+
+    public static void method1(){
+        System.out.println("*** METHOD1 START ***");
+        method2();
+        System.out.println("*** METHOD1 START ***");
+    }
+
+    public static void method2(){
         Scanner scanner = new Scanner(System.in);
+        System.out.println("*** METHOD2 START ***");
 
         try{
             String[] vect = scanner.nextLine().split(" ");
@@ -14,14 +27,14 @@ public class Try_Catch {
         }
         catch (ArrayIndexOutOfBoundsException e){
             System.out.println("Invalid position!");
+            e.printStackTrace();
+            scanner.next();
         }
         catch (InputMismatchException e){
             System.out.println("Input error");
         }
 
-        System.out.println("End of Program");;
-
         scanner.close();
+        System.out.println("*** METHOD2 END***");
     }
-    
 }
