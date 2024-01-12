@@ -136,7 +136,7 @@ public class Cap_06 {
 
         System.out.println(Arrays.toString(D));
 
-        
+
         //--J--
         int[] A = new int[5];
         int[] B = new int[5];
@@ -216,6 +216,97 @@ public class Cap_06 {
         System.out.println(Arrays.toString(B));
 
 
+        //--P--
+        int[] A = new int[12];
+        int[] B = new int[12];
+
+        for (int i = 0; i < A.length; i++) {
+            A[i] = random.nextInt(10);
+
+            if (A[i] % 2 != 0){
+                B[i] = A[i] * 2;
+            }else {
+                B[i] = A[i];
+            }
+        }
+        System.out.println(Arrays.toString(A));
+        System.out.println(Arrays.toString(B));
+
+
+        //--Q--
+        double[] A = new double[15];
+        double[] B = new double[15];
+
+        for (int i = 0; i < A.length; i++) {
+            A[i] = random.nextDouble() * 10;
+
+            if (A[i] % 2 == 0){
+                B[i] = (A[i] / 2);
+            }else {
+                B[i] = A[i] * 1.5;
+            }
+        }
+        System.out.println(Arrays.toString(A));
+        System.out.println(Arrays.toString(B));
+
+
+        //--R--
+        int[] A = new int[6];
+        int[] B = new int[6];
+        int[] C = new int[6];
+        int[] D = new int[6];
+
+        for (int i = 0; i < A.length; i++) {
+            A[i] = random.nextInt(10);
+            B[i] = random.nextInt(10);
+
+            if (i % 2 != 0){
+                C[i] = A[i];
+                D[i] = B[i];
+            }else {
+                C[i] = B[i];
+                D[i] = A[i];
+            }
+        }
+
+        System.out.println(Arrays.toString(A));
+        System.out.println(Arrays.toString(B));
+        System.out.println(Arrays.toString(C));
+        System.out.println(Arrays.toString(D));
+
+
+
+        //--S--
+        int[] A = new int[6];
+        int[] B = new int[6];
+        int[] C = new int[12];
+
+        int i = 0;
+        while (i != 6) {
+            System.out.print("A: ");
+            int num = scanner.nextInt();
+            if (num % 2 == 0){
+                A[i] = num;
+                i++;
+            }else {
+                System.out.println("Invalid");
+            }
+        }
+        i = 0;
+        while (i != 6) {
+            System.out.print("B: ");
+            int num = scanner.nextInt();
+            if (num % 2 != 0){
+                B[i] = num;
+                i++;
+            }else {
+                System.out.println("Invalid");
+            }
+        }
+        System.arraycopy(A, 0, C,0, A.length);
+        System.arraycopy(B, 0, C,A.length, B.length);
+
+        System.out.println(Arrays.toString(C));
 
 
         scanner.close();
