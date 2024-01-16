@@ -33,6 +33,16 @@ public class Adivinhação {
         }
     }
 
+    public boolean playAgain(int resposta) throws GuessException {
+        if (resposta < 1 || resposta > 2) {
+            throw new GuessException("\nEscolha Inválida!");
+        }
+        if (resposta == 2) {
+            return false;
+        }
+        return true;
+    }
+
     public String toString(){
         if (escolhaUsuario == escolhaComputador)
             return "\nYou Win! :D\nYou: " + escolhaUsuario + "\nComputer: " + escolhaComputador ;

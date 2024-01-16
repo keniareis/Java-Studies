@@ -14,26 +14,28 @@ public class Program  {
             System.out.println("====== ADIVINHE O NÚMERO ======");
             System.out.print("Escolha um número de 1 a 5: ");
             int escolhaUsuario = scanner.nextInt();
+
             Adivinhação adivinhação = new Adivinhação(escolhaUsuario);
 
             try {
                 adivinhação.computador();
+                System.out.println(adivinhação);
             } catch (GuessException e) {
-                e.getMessage();
+                System.out.println(e.getMessage());
             }
 
-            System.out.println(adivinhação);
 
             System.out.println("Jogar novamente? [1]Sim [2]Não");
             int resposta = scanner.nextInt();
 
-            if (resposta == 2)
-                break;
-            else if (resposta < 1 || resposta > 2) {
-                System.out.println("\nEscolha Inválida!");
-                System.out.println("Jogar novamente? [1]Sim [2]Não");
-                resposta = scanner.nextInt();
+            try{
+                if(!adivinhação.playAgain(resposta)){
+                    break;
+                }
+            }catch (GuessException e){
+                System.out.println(e.getMessage());
             }
+
         }
     }
 }
