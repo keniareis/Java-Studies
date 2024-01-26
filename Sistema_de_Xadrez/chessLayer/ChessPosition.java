@@ -27,7 +27,7 @@ public class ChessPosition {
     }
 
     protected static ChessPosition fromPosition(Position position){
-        return new ChessPosition((char)('a' - position.getColumn()), 8 - position.getRow());//converte a linha e a coluna do sistema do array para as cordernadas do tabuleiro
+        return new ChessPosition((char)('a' + position.getColumn()), 8 - position.getRow());//converte a linha e a coluna do sistema do array para as cordernadas do tabuleiro
     }
 
     @Override
