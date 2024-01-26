@@ -1,9 +1,11 @@
 package org.Learnig.Sistema_de_Xadrez.application;
 
+import org.Learnig.Sistema_de_Xadrez.chessLayer.ChessException;
 import org.Learnig.Sistema_de_Xadrez.chessLayer.ChessMatch;
 import org.Learnig.Sistema_de_Xadrez.chessLayer.ChessPiece;
 import org.Learnig.Sistema_de_Xadrez.chessLayer.ChessPosition;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Program {
@@ -11,7 +13,8 @@ public class Program {
         Scanner scanner = new Scanner(System.in);
         ChessMatch chessMatch = new ChessMatch();
 
-        while (true){
+        try {
+            UI.clearScreen();
             UI.printBoard(chessMatch.getPieces());
             System.out.println();
             System.out.print("Origem: ");
@@ -22,6 +25,9 @@ public class Program {
             ChessPosition target = UI.readChessPosition(scanner);
 
             ChessPiece capturedPiece = chessMatch.performChessMove(source, target);
+        }catch (ChessException | InputMismatchException e){
+            System.out.println(e.getMessage());
+            scanner.nextLine();
         }
     }
 }
