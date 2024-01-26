@@ -1,5 +1,7 @@
 package org.Learnig.Sistema_de_Xadrez.boardLayer;
 
+import java.awt.*;
+
 public class Board {
     private int rows;
     private int columns;
@@ -41,6 +43,19 @@ public class Board {
         }
         pieces[position.getRow()][position.getColumn()] = piece; // coloca a peça na posição especificada
         piece.position = position; // atualizando a posição da peça para a nova posição no tabuleiro
+    }
+
+    public Piece removePiece(Position position){
+        if (!positionExists(position)){
+            throw new BoardException("Posição não está no tabuleiro!");
+        }
+        if (piece(position) == null){
+            return null;
+        }
+        Piece aux = piece(position);
+        aux.position = null;//defini a posição da peça como null ou seja a retira do tabuleiro
+        pieces[position.getRow()][position.getColumn()] = null;//defini a posição do array como null
+        return aux;
     }
 
     private boolean positionExists(int row, int column){
