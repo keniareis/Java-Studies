@@ -1,11 +1,15 @@
 package org.Learnig.Sistema_de_Xadrez.application;
 
+import org.Learnig.Sistema_de_Xadrez.chessLayer.ChessMatch;
 import org.Learnig.Sistema_de_Xadrez.chessLayer.ChessPiece;
 import org.Learnig.Sistema_de_Xadrez.chessLayer.ChessPosition;
 import org.Learnig.Sistema_de_Xadrez.chessLayer.Color;
 
+import java.util.Arrays;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class UI {
     public static final String ANSI_RESET = "\u001B[0m";
@@ -42,6 +46,16 @@ public class UI {
             throw new InputMismatchException("Erro ao ler a posição. Valores validos são de a1 até h8.");
         }
     }
+
+    public static void printMatch(ChessMatch chessMatch, List<ChessPiece> captured){
+        printBoard(chessMatch.getPieces());
+        System.out.println();
+        printCapturedPieces(captured);
+        System.out.println();
+        System.out.println("Jogada: " + chessMatch.getTurn());
+        System.out.println("Esperando jogador: " + chessMatch.getCurrentPlayer());
+    }
+
     public static void printBoard(ChessPiece[][] pieces){
         for (int i = 0; i < pieces.length; i++) {
             System.out.print((8 - i) + " ");
@@ -78,5 +92,22 @@ public class UI {
             }
         }
         System.out.print(" ");
+    }
+
+    private static void printCapturedPieces(List<ChessPiece> captured){
+        List<ChessPiece> white = captured.stream().filter(x -> x.getColor() == Color.WHITE).collect(Collectors.toList());
+        List<ChessPiece> black = captured.stream().filter(x -> x.getColor() == Color.BLACK).collect(Collectors.toList());
+        System.out.println("Peças capturadas: ");
+        System.out.print("Bracas: ");
+        System.out.print(ANSI_WHITE);
+
+        System.out.println(Arrays.toString(white.toArray()));
+        System.out.print(ANSI_RESET);
+        System.out.print("Pretas: ");
+        System.out.print(ANSI_YELLOW);
+
+        System.out.println(Arrays.toString(black.toArray()));
+        System.out.print(ANSI_RESET);
+
     }
 }

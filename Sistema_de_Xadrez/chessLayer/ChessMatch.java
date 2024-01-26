@@ -6,12 +6,30 @@ import org.Learnig.Sistema_de_Xadrez.boardLayer.Position;
 import org.Learnig.Sistema_de_Xadrez.chessLayer.pieces.King;
 import org.Learnig.Sistema_de_Xadrez.chessLayer.pieces.Rook;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ChessMatch {
+    private int turn;
+    private Color currentPlayer;
     private Board board;
+
+    private List<Piece> piecesOnTheBoard = new ArrayList<>();
+    private List<Piece> capturedPieces = new ArrayList<>();
 
     public ChessMatch() {
         board = new Board(8, 8);
+        turn = 1;
+        currentPlayer = Color.WHITE;
         initialSetup();
+    }
+
+    public int getTurn() {
+        return turn;
+    }
+
+    public Color getCurrentPlayer() {
+        return currentPlayer;
     }
 
     public ChessPiece[][] getPieces(){
@@ -36,6 +54,7 @@ public class ChessMatch {
         validateSourcePosition(source);//verifica se a peça na posição de origem pode ser movida
         validateTargetPosition(source, target);
         Piece capturedPiece = makeMove(source, target);//move a peça para o destino e retorna a peça capturada
+        nextTurn();
         return (ChessPiece) capturedPiece;//converte pra chesspiece e a retorna
     }
 
@@ -43,12 +62,21 @@ public class ChessMatch {
         Piece p = board.removePiece(source);
         Piece capturedPiece = board.removePiece(target);
         board.placePiece(p, target);
+
+        if (capturedPiece != null){
+            piecesOnTheBoard.remove(capturedPiece);
+            capturedPieces.add(capturedPiece);
+        }
+
         return capturedPiece;
     }
 
     private void validateSourcePosition(Position position){
         if (!board.thereIsAPiece(position)){
             throw new ChessException("Não há peça nessa posição");
+        }
+        if (currentPlayer != ((ChessPiece)board.piece(position)).getColor()){
+            throw new ChessException("A peça escolhida não é sua");
         }
         if (!board.piece(position).isThereAnyPossibleMove()){
             throw new ChessException("Não tem movimentos possíveis para a peça escolhida");
@@ -61,8 +89,14 @@ public class ChessMatch {
         }
     }
 
+    private void nextTurn(){
+        turn++;
+        currentPlayer = (currentPlayer == Color.WHITE) ? Color.BLACK : Color.WHITE;
+    }
+
     private void placeNewPiece(char column, int row, ChessPiece piece){
         board.placePiece(piece, new ChessPosition(column, row).toPostion());//coloca a peça na posição especificada no toabuleiro do jogo
+        piecesOnTheBoard.add(piece);
     }
 
     public void initialSetup(){
@@ -80,5 +114,4 @@ public class ChessMatch {
         placeNewPiece('e', 8, new Rook(board, Color.BLACK));
         placeNewPiece('d', 8, new King(board, Color.BLACK));
     }
-
 }

@@ -21,4 +21,9 @@ public class ChessPiece extends Piece {
         ChessPiece p = (ChessPiece) getBoard().piece(position);
         return p != null && p.getColor() != color;
     }
+
+    @Override
+    public boolean[][] possibleMoves() {
+        return new boolean[0][];
+    }
 }
