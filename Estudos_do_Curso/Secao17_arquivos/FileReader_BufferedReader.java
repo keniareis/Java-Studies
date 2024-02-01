@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class FileReader_BufferedReader {
     public static void main(String[] args){
-        String path = "C:\\Users\\KENIA\\IdeaProjects\\Forms\\src\\main\\java\\org\\Learnig\\Estudos_do_Curso\\Secao17_arquivos\\teste.txt";
+        String path = "C:\\Users\\kenia\\OneDrive\\Documentos\\Forms\\src\\main\\java\\org\\Learnig\\Estudos_do_Curso\\Secao17_arquivos\\teste.txt";
 
 
         try (BufferedReader br = new BufferedReader(new FileReader(path))){
