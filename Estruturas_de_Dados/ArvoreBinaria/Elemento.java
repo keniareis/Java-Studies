@@ -4,7 +4,7 @@ public class Elemento<TIPO> {
     private TIPO valor;
     private Elemento<TIPO> esquerda;
     private Elemento<TIPO> direita;
-    public Elemento(TIPO valor, Elemento<TIPO> esquerda, Elemento<TIPO> direita){
+    public Elemento(TIPO valor){
         this.valor = valor;
         this.esquerda = null;
         this.direita = null;
